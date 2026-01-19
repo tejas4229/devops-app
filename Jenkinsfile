@@ -3,7 +3,7 @@ pipeline {
 
   environment {
     DOCKER_CREDS = credentials('6c8fbaa6-2a8b-4bfc-b509-7b676f30b880')
-    IMAGE_NAME = "tejas4229/devops-app"
+    IMAGE_NAME = "tej42/devops-app"
   }
 
   stages {
