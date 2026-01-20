@@ -31,8 +31,8 @@ pipeline {
         sh '''
           kubectl apply -f deployment.yaml
           kubectl apply -f service.yaml
-          kubectl rollout restart deployment/devops-deploy
-          kubectl rollout status deployment/devops-deploy
+          kubectl rollout restart deployment/devops-app
+          kubectl rollout status deployment/devops-app
         '''
       }
     }
