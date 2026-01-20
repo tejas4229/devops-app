@@ -26,6 +26,16 @@ pipeline {
         sh 'docker push $IMAGE_NAME:latest'
       }
     }
+     stage('Deploy to Kubernetes') {
+      steps {
+        sh '''
+          kubectl apply -f deployment.yaml
+          kubectl apply -f service.yaml
+          kubectl rollout restart deployment/devops-deploy
+          kubectl rollout status deployment/devops-deploy
+        '''
+      }
+    }
   }
 }
 
