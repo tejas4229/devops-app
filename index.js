@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-const http = require('http');
-http.createServer((req, res) => {
-  res.end("lay xala Project Running Successfully");
-}).listen(3000);
-=======
 const express = require('express');
 const app = express();
 
@@ -20,5 +14,3 @@ app.get('/health', (req, res) => {
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`App running on port ${PORT}`);
 });
-
->>>>>>> 7fe7d00 (Update app and Kubernetes manifests)
