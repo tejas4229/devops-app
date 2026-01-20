@@ -1,19 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: devops-deploy
+  name: devops-app
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: devops
+      app: devops-app
   template:
     metadata:
       labels:
-        app: devops
+        app: devops-app
     spec:
       containers:
-      - name: devops
+      - name: devops-app
         image: tej42/devops-app:latest
         ports:
         - containerPort: 3000
+
