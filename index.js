@@ -4,7 +4,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
-  res.send('🚀 Hello Tejas! CI/CD Pipeline Working Successfully!');
+  res.send('🚀 Hello Tejas! CI/CD Pipeline Working Successfully! with version 2');
 });
 
 app.get('/health', (req, res) => {
